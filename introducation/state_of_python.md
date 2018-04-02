@@ -25,4 +25,4 @@ python又有三种实现：
 python支持跨平台，主持主流的OS：Windows，MacOS，Linux
 
 
-python的扩展性，python的核心可以在官网下载安装，所有的第三方库（有其他开发者或者团队编写并开源）都归档在[pypi](https://pypi.python.org/pypi)，我也是前段时间才知道，任何开发者都可以讲自己编写的代码打包发布在这里，供其他人下载使用哦
+python的扩展性，python的核心可以在官网下载安装，所有的第三方库（有其他开发者或者团队编写并开源）都归档在[pypi](https://pypi.python.org/pypi)，我也是前段时间才知道，任何开发者都可以将自己编写的代码打包发布在这里，供其他人下载使用哦
