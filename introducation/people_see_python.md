@@ -6,7 +6,7 @@
 
 ## 编程语言排行榜
 
-TIOBE发布2018年3月编程语言排行榜数据(前十名，[原文出处](https://www.tiobe.com/tiobe-index//))：
+TIOBE发布2018年3月编程语言排行榜数据([原文出处](https://www.tiobe.com/tiobe-index//))：
 
 ![tiobe 2018-03](pics/tiobe.PNG)
 
