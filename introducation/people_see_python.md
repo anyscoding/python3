@@ -31,6 +31,8 @@ github上[各编程语言项目数量](https://github.com/search/advanced)：
 
 ![python projects](pics/python_projects.PNG)
 
+另外linux系统诸多发行版都自带python(2和3)哦
+
 随着边缘计算，物联网的发展，python很可能运行在你身边的每一个可见设备上，为你带来优质的服务
 
 # 大众接受
