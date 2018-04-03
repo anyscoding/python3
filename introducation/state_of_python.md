@@ -11,7 +11,7 @@
 
 [python 官网](https://www.python.org)
 
-目前市面上流行的版本由：
+目前市面上流行的版本有：
 * python2，最高版本2.7.14（**逐渐淘汰**）
 * python3，最高版本3.6.5
 
@@ -25,4 +25,4 @@ python又有三种实现：
 python支持跨平台，主持主流的OS：Windows，MacOS，Linux
 
 
-python的扩展性，python的核心可以在官网下载安装，所有的第三方库（有其他开发者或者团队编写并开源）都归档在[pypi](https://pypi.python.org/pypi)，我也是前段时间才知道，任何开发者都可以将自己编写的代码打包发布在这里，供其他人下载使用哦
+python的扩展性，python的核心可以在官网下载安装，所有的第三方库（由其他开发者或者团队编写并开源）都归档在[pypi](https://pypi.python.org/pypi)，我也是前段时间才知道，任何开发者都可以将自己编写的代码打包发布在这里，供其他人下载使用哦
