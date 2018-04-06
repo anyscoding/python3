@@ -22,3 +22,5 @@ python3新手入门教程
 第三章 基础
     
     3.1 [编程之前](basic/before_programming.md)
+    
+    3.2 [什么是编程](basic/what_is_programming.md)
