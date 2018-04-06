@@ -24,3 +24,5 @@ python3新手入门教程
     3.1 [编程之前](basic/before_programming.md)
     
     3.2 [什么是编程](basic/what_is_programming.md)
+    
+    3.3 [变量](basic/variable.md)
