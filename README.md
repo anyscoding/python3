@@ -18,3 +18,7 @@ python3新手入门教程
     2.2 [安装IDE](install/IDE.md)
     
     2.3 [创建项目和HelloWorld](install/create_project.md)
+
+第三章 基础
+    
+    3.1 [编程之前](basic/before_programming.md)
