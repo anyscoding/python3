@@ -25,4 +25,6 @@ python3新手入门教程
     
     3.2 [什么是编程](basic/what_is_programming.md)
     
-    3.3 [变量](basic/variable.md)
+    3.3 [python project的结构](basic/program_structure.md)
+    
+    3.4 [变量](basic/variable.md)
