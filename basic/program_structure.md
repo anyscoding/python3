@@ -14,7 +14,7 @@ python package： 是一个文件夹，文件夹中包含一个`__init__.py`，�
 # module
 python module：是一个文件，文件一般以`.py`结尾，文件中是python代码
 
-一个python可以包含任意数量的module，但module也可以脱离package单独存在
+一个package可以包含任意数量的module，但module也可以脱离package单独存在
 
 module中的代码包括但不仅限于：
 * 变量
