@@ -28,3 +28,5 @@ python3新手入门教程
     3.3 [python project的结构](basic/program_structure.md)
     
     3.4 [变量](basic/variable.md)
+    
+    3.5 [数据结构概述](basic/data_structure.md)
