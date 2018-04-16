@@ -32,3 +32,5 @@ python3新手入门教程
     3.5 [数据结构概述](basic/data_structure.md)
     
     3.6 [数字](basic/number.md)
+    
+    3.7 [元组](basic/tuple.md)
