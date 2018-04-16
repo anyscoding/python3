@@ -29,7 +29,7 @@ python3新手入门教程
     
     3.4 [变量](basic/variable.md)
     
-    3.5 [数据结构
+    3.5 数据结构
         
         3.5.1 [概述](basic/data_structure.md)
     
