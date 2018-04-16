@@ -34,5 +34,5 @@ python3新手入门教程
         3.5.1 [概述](basic/data_structure.md)
         
         3.5.2 [数字](basic/number.md)
-        
+        
         3.5.3 [元组](basic/tuple.md)
