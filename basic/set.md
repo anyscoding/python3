@@ -128,7 +128,7 @@ print(a)
 *```*s:Iterable[TypeVar('_T')]```是指可迭代对象，例如：元组、集合、列表，这些油多个元素组成的对象*
 
 ## set.clear(set)
-情况集合中的元素
+清空集合中的元素
 
 ```
 a = {1, 2}
@@ -239,6 +239,30 @@ KeyError: 4
 
 **注意：当试图从集合中移除一个不存在的元素时，会报错```KeyError```**
 
+python还提供另外一个方法```set.discard(self: set, element: TypeVar('_T'))```，如果element在集合中，则移除他，如果不再，什么也不做
+
+看个例子
+
+```
+a = {1, 2, 3}
+print(a)
+
+a.discard(4)
+print(a)
+
+a.discard(3)
+print(a)
+
+```
+
+运行结果
+
+```
+{1, 2, 3}
+{1, 2, 3}
+{1, 2}
+```
+
 ## set.add(set, element:TypeVar('_T'))
 
 往集合中添加一个元素
@@ -282,7 +306,11 @@ TypeError: unhashable type: 'list'
 
 **注意：当往集合中添加可变数据类型（unhashable）时，会报错：TypeError: unhashable type: '你的数据类型'**
 
-## set.union(set, *s:Iterable[TypeVar('_T')]) -> set
+# 集合操作
+
+集合的操作包括：并集、交集、差集、判断子集、判断超集等，我们一起来看看
+
+## set.union(self: set, *s: Iterable[TypeVar('_T')]) -> set
 
 求并集
 
@@ -304,3 +332,178 @@ print(b)
 
 **这里需要注意：```set.union()```会将计算得到的并集以返回值的方式给调用者，所以需要使用一个变量来得到并集，```b = a.union({1, 2, 4})```**
 
+## set.intersection(self: set, *s: Iterable)
+
+求两个集合的交集，我们来看个例子
+
+```
+a = {1, 2, 3}
+b = {1, 3, 5}
+
+c = a.intersection(b)
+print(c)
+
+```
+
+运行结果
+
+```
+{1, 3}
+```
+
+从代码中看到，求a和b的交集，所得结果保存到c中，python还提供另外一种方法
+
+```
+a = {1, 2, 3}
+b = {1, 3, 5}
+
+print(id(a))
+print(a)
+
+a.intersection_update(b)
+
+print(id(a))
+print(a)
+
+```
+
+运行结果
+
+```
+2026658385480
+{1, 2, 3}
+2026658385480
+{1, 3}
+```
+
+直接修改集合a为a与b的交集，不创建新的对象
+
+## set.difference(self: set, *s: Iterable)
+
+求两个集合的差集。差集的定义：有两个集合A、B，所有在A并且不再B中的元素组成的集合，就是A与B的差集（A-B）
+
+看个例子
+
+```
+a = {1, 2, 3}
+b = {1, 3, 5}
+
+c = a.difference(b)
+print(c)
+
+d = a - b
+print(d)
+
+```
+
+运行结果
+
+```
+{2}
+{2}
+```
+
+difference_update同intersection_update，此处不再做详细介绍
+
+## set.symmetric_difference(self: set, s: Iterable[TypeVar('_T')])
+
+求两个集合的对称差集，对称差集的定义：有两个集合A、B，所有属于A与B并集，但不属于A与B交集的元素组成的集合
+
+看个例子
+
+```
+a = {1, 2, 3}
+b = {1, 9, 8}
+
+c = a.symmetric_difference(b)
+print(c)
+
+print(id(a))
+print(a)
+a.symmetric_difference_update(b)
+print(id(a))
+print(a)
+
+```
+
+运行结果
+
+```
+{2, 3, 8, 9}
+2889335492168
+{1, 2, 3}
+2889335492168
+{8, 9, 2, 3}
+```
+
+## set.issubset(self: set, *s: Iterable)
+
+判断一个集合是否为另外一个集合的子集，子集的定义：有两个集合A、B，A中的所有元素都在B中，则A是B的自己
+
+看个例子
+
+```
+a = {1, 2, 3}
+b = {1, 3, 5}
+c = {1, 2, 3, 4}
+
+print(a.issubset(b))
+print(a.issubset(c))
+
+```
+
+运行结果
+
+```
+False
+True
+
+```
+
+## set.issuperset(self: set, *s: Iterable)
+
+判断一个集合是否为另外一个集合的超集，超集的定义：有两个集合A、B，A中的所有元素都在B中，则B是A的超集
+
+看个例子
+
+```
+a = {1, 2, 3}
+b = {1, 3, 5}
+c = {1, 2}
+
+print(a.issuperset(b))
+print(a.issuperset(c))
+
+```
+
+运行结果
+
+```
+False
+True
+```
+
+## set.isdisjoint(self: set, s: Iterable)
+
+判断两个集合的交集是否为空
+
+看个例子
+
+```
+a = {1, 2, 3}
+b = {4, 5, 6}
+c = {1, 9, 8}
+
+print(a.isdisjoint(b))
+print(a.isdisjoint(c))
+
+```
+
+运行结果
+
+```
+True
+False
+```
+
+集合的介绍就到这里了
