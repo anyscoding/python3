@@ -106,7 +106,7 @@ TypeError: unhashable type: 'dict'
 
 与不可变的数据类型（例如：元组、数字）相比，可以对可变数据类型进行修改，我们一起看看集合的使用
 
-## set.update(set, *s:Iterable[TypeVar('_T')])
+## set.update(self: set, *s: Iterable[TypeVar('_T')])
 
 更新集合，看个例子：
 
@@ -127,7 +127,8 @@ print(a)
 
 *```*s:Iterable[TypeVar('_T')]```是指可迭代对象，例如：元组、集合、列表，这些油多个元素组成的对象*
 
-## set.clear(set)
+## set.clear(self: set)
+
 清空集合中的元素
 
 ```
@@ -147,7 +148,8 @@ set()
 
 *```set()```表示没有任何元素的空集合*
 
-## set.pop(set)
+## set.pop(self: set)
+
 弹出一个元素
 
 ```
@@ -196,7 +198,7 @@ KeyError: 'pop from an empty set'
 
 **注意：当对一个空集合执行pop操作时，会报错：KeyError: 'pop from an empty set'**
 
-## set.remove(set, element:TypeVar('_T'))
+## set.remove(self: set, element:TypeVar('_T'))
 
 移除一个元素
 
@@ -263,14 +265,14 @@ print(a)
 {1, 2}
 ```
 
-## set.add(set, element:TypeVar('_T'))
+## set.add(self: set, element:TypeVar('_T'))
 
 往集合中添加一个元素
 
 ```
 a = {1, 2, 3}
 print(a)
-
+        
 a.add(4)
 print(a)
 
@@ -312,7 +314,7 @@ TypeError: unhashable type: 'list'
 
 ## set.union(self: set, *s: Iterable[TypeVar('_T')]) -> set
 
-求并集
+求两个集合的并集，并集的定义：有两个集合A、B，所有属于A或者属于B的元素的集合
 
 ```
 a = {1, 2, 3}
@@ -332,9 +334,9 @@ print(b)
 
 **这里需要注意：```set.union()```会将计算得到的并集以返回值的方式给调用者，所以需要使用一个变量来得到并集，```b = a.union({1, 2, 4})```**
 
-## set.intersection(self: set, *s: Iterable)
+## set.intersection(self: set, *s: Iterable) -> set
 
-求两个集合的交集，我们来看个例子
+求两个集合的交集，我们来看个例子。交集的定义：有两个集合A、B，所有属于A并且属于B的元素的集合
 
 ```
 a = {1, 2, 3}
