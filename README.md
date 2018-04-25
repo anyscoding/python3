@@ -35,6 +35,12 @@ python3新手入门教程
         
         3.5.2 [数字](basic/number.md)
         
-        3.5.3 [元组](basic/tuple.md)
+        3.5.3 [字符串](basic/string.md)
         
-        3.5.4 [集合](basic/set.md)
+        3.5.4 [元组](basic/tuple.md)
+        
+        3.5.5 [集合](basic/set.md)
+        
+        3.5.6 [列表](basic/list.md)
+        
+        3.5.7 [字典](basic/dict.md)
