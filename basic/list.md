@@ -16,6 +16,8 @@ a = [1, 2, 3]
 
 ## L.append(object) -> None -- append object to end
 
+说明：在列表尾部追加一个元素
+
 **示例**：
 ```
 a = [1, 2, 3]
@@ -33,6 +35,8 @@ print(id(a), a)
 ```
 
 ## L.clear() -> None -- remove all items from L
+
+说明：清空列表中所有的元素
 
 **示例**：
 ```
@@ -202,7 +206,7 @@ IndexError: pop index out of range
 
 ## L.reverse() -- reverse *IN PLACE*
 
-说明：将列表中的元素逆序
+说明：将列表中的元素逆序排列
 
 **示例**：
 ```
@@ -251,6 +255,8 @@ sort有两个参数，```key=None```和```reverse=False```，我们详细说明�
 
 ## L.count(value) -> integer -- return number of occurrences of value
 
+说明：列表中value的个数
+
 **示例**：
 ```
 a = [1, 2, 2, 3, 3, 3]
@@ -269,6 +275,8 @@ print(a.count(3))
 ```
 
 ## L.index(value, [start, [stop]]) -> integer -- return first index of value.
+
+说明：从start下标到stop下标之间，value最早出现的下标
 
 **示例**：
 ```
