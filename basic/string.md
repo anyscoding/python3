@@ -9,7 +9,7 @@ a = "HelloWorld"
 
 ```
 
-根据个人喜好，可以用```"HelloWorld"```或者```'HelloWorld'```，或者```"""HelloWorld"""
+根据个人喜好，可以用```"HelloWorld"```或者```'HelloWorld'```，或者```"""HelloWorld"""```
 
 如果你申明的字符串中包含```""```或者```''```，可以这样：
 
@@ -162,7 +162,7 @@ print(formatted)
 Hello, Jack, my name is Tom, I am 20 years old
 ```
 
-这里暂时理解不了也不用担心，后续在将函数或者方法的时候会有更加详细的解释
+这里暂时理解不了也不用担心，后续在讲函数或者方法的时候会有更加详细的解释
 
 ## S.title() -> str
 
@@ -185,3 +185,46 @@ print(title)
 Hello, Jack, My Name Is Tom, I Am 20 Years Old
 ```
 
+## S.capitalize() -> str
+
+说明： 返回```S```的首字母大写，其余字母小写形式
+
+**示例**：
+
+```
+a = "Hello, Jack, my name is Tom, I am 20 years old"
+
+capitalize = a.capitalize()
+
+print(capitalize)
+
+```
+
+**运行结果**：
+
+```
+Hello, jack, my name is tom, i am 20 years old
+```
+
+## S.center(width[, fillchar]) -> str
+
+说明： 返回一个原字符串居中,并使用空格填充至长度 width 的新字符串。默认填充字符为空格
+
+**示例**：
+
+```
+a = "Center"
+
+print(a.center(10))
+print(a.center(10, "#"))
+
+```
+
+**运行结果**：
+
+```
+  Center  
+##Center##
+```
+
+## S.encode(encoding='utf-8', errors='strict') -> bytes
