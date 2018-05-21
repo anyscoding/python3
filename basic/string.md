@@ -228,3 +228,56 @@ print(a.center(10, "#"))
 ```
 
 ## S.encode(encoding='utf-8', errors='strict') -> bytes
+
+说明： 按照```encoding```指定的编解码器将字符串S编码
+
+**参数说明**：
+* **encoding**： 编解码器，默认为```utf-8```，其他可能的值可以参考：[python standard encodings](https://docs.python.org/3/library/codecs.html#standard-encodings)
+* **errors**： error handling scheme，默认是```strict```，其他可能的值可以参考[python encode error handlers](https://docs.python.org/3/library/codecs.html#error-handlers)
+
+**示例**：
+
+```
+a = "Encode a string, utf-8, strict"
+
+encoded = a.encode()
+
+print(encoded)
+
+```
+
+**运行结果**：
+
+```
+b'Encode a string, utf-8, strict'
+```
+
+## S.endswith(suffix[, start[, end]]) -> bool
+
+说明： 判断字符串S在```start```与```end```之间是否以特定的字符串```suffix```结尾
+
+**参数说明**：
+* **suffix**： 后缀，可以是字符串或者字符串的元组
+* **start**: 可选参数，默认为0
+* **end**: 可选参数，默认为字符串的长度
+
+**示例**：
+
+```
+a = "Encode a string, utf-8, strict"
+b = "Encode a string, utf-8, ignore"
+c = "Encode a string, utf-8, replace"
+
+resulta = a.endswith(("strict", "replace", "ignore"))
+resultb = b.endswith(("strict", "replace", "ignore"))
+resultc = c.endswith(("strict", "replace", "ignore"), 1, 8)
+
+print(resulta, resultb, resultc)
+
+```
+
+**运行结果**：
+
+```
+True True False
+```
