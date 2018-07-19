@@ -281,3 +281,23 @@ print(resulta, resultb, resultc)
 ```
 True True False
 ```
+
+## S.capitalize() -> str
+
+说明： 将字符串首字母大写
+
+**示例**：
+
+```
+print("this is a string".capitalize())
+print("THIS IS A STRING".capitalize())
+
+```
+
+**运行结果**：
+
+```
+This is a string
+This is a string
+```
+
