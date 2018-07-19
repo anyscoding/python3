@@ -282,22 +282,7 @@ print(resulta, resultb, resultc)
 True True False
 ```
 
-## S.capitalize() -> str
+## S.find(sub[, start[, end]]) -> int
 
-说明： 将字符串首字母大写
-
-**示例**：
-
-```
-print("this is a string".capitalize())
-print("THIS IS A STRING".capitalize())
-
-```
-
-**运行结果**：
-
-```
-This is a string
-This is a string
-```
+说明： 在字符串中查找子字符串的开始索引
 
