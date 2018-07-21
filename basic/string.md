@@ -286,3 +286,116 @@ True True False
 
 说明： 在字符串中查找子字符串的开始索引
 
+**参数说明**：
+* **sub**：子字符串
+* **start**：起始位置，默认为0
+* **end**： 结束位置，默认为字符串长度减1
+
+**返回值**：找到返回子字符串起始位置，找不到返回-1
+
+**示例**：
+
+```
+print("this is a string".find("is"))
+print("this is a string".find("is", 3, 10))
+print("this is a string".find("is", 9, 12))
+
+```
+
+**运行结果**：
+
+```
+2
+5
+-1
+```
+
+## S.join(iterable) -> str
+
+说明：将可迭代对象的元素用字符串S连接起来
+
+**参数说明**：
+* **interable**： 可迭代对象，例如：[],()等，要求可迭代对象中的元素必须为str
+
+**返回值**： 连接之后的字符串
+
+**示例**：
+
+```
+print("_".join(["one", "two", "three"]))
+print("_".join(("one", "two", "three")))
+print("_".join("abc"))
+
+```
+
+**运行结果**：
+
+```
+one_two_three
+one_two_three
+a_b_c
+
+```
+
+另外再看一个异常的例子：
+
+```
+print("_".join([1, 2, 3]))
+
+```
+
+运行结果：
+
+```
+Traceback (most recent call last):
+  File "D:/GitHub/HelloWorld/hello.py", line 4, in <module>
+    print("_".join([1, 2, 3]))
+TypeError: sequence item 0: expected str instance, int found
+```
+
+*说明：可迭代对象的元素要求是str类型，否则会报错*
+
+## S.split(sep=None, maxsplit=-1) -> list of strings
+
+说明： 将字符串按照指定sep进行分割
+
+**参数说明**：
+* **sep**： 分割字符串，默认为None，以空白为分割
+* **maxsplit**： 最大分割次数，默认为-1，始终分割
+
+**返回值**： 分割后的字符串列表
+
+**示例**：
+
+```
+print("one two three     four".split())
+print("one_two_three_four".split("_"))
+print("one_two_three_four".split("_", 2))
+
+```
+
+**运行结果**：
+
+```
+['one', 'two', 'three', 'four']
+['one', 'two', 'three', 'four']
+['one', 'two', 'three_four']
+```
+
+## S.isxxx -> bool
+
+说明： 判断字符串是否为xxx
+
+包括：
+* S.isalnum() -> bool。是否为字母和数字
+* S.isalpha() -> bool。是否为字母
+* S.isdecimal() -> bool。是否为十进制数
+* S.isdigit() -> bool。是否为数字
+* S.islower() -> bool。是否为小写
+* S.isnumeric() -> bool。是否只包含数字（0-9）
+* S.isspace() -> bool。是否为空白
+* S.isupper() -> bool。是否为大写
+* ......
+
+比较多，就不一一列举了
+
