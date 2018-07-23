@@ -42,9 +42,14 @@ sometimes to frameworks
 使用```""""""```申明字符串时，会完全按照原格式输出，包括换行、空格等
 
 # 使用
-## S.index(sub[, start[, end]]) -> int
+## 查询
+### S.index(sub[, start[, end]]) -> int
 
 说明： 在下标```start```和```end```之间，sub第一次出现的下标
+
+另外，S.rindex(sub[, start[, end]]) -> int 在start到end之间查找sub的最大索引（可以理解成从右往左找到的第一个匹配串）
+
+S.find(sub[, start[, end]]) -> int 和 S.rfind(sub[, start[, end]]) -> int 也可以达到同样的效果
 
 **示例**：
 
@@ -84,7 +89,7 @@ Traceback (most recent call last):
 ValueError: substring not found
 ```
 
-## S.count(sub[, start[, end]]) -> int
+### S.count(sub[, start[, end]]) -> int
 
 说明： 在下标```start```，```end```之间，```sub```出现的次数
 
@@ -105,7 +110,39 @@ print(i_count)
 4
 ```
 
-## S.format(*args, **kwargs) -> str
+### S.find(sub[, start[, end]]) -> int
+
+说明： 在字符串中查找子字符串的开始索引
+
+**参数说明**：
+* **sub**：子字符串
+* **start**：起始位置，默认为0
+* **end**： 结束位置，默认为字符串长度减1
+
+**返回值**：找到返回子字符串起始位置，找不到返回-1
+
+**示例**：
+
+```
+print("this is a string".find("is"))
+print("this is a string".find("is", 3, 10))
+print("this is a string".find("is", 9, 12))
+
+```
+
+**运行结果**：
+
+```
+2
+5
+-1
+```
+
+## 修改类
+
+说明：字符串属于[不可变类型](./basic/data_structure.md)中说明过，这里所说的修改是指讲一个字符串作为输入，得到另外的输出
+
+### S.format(*args, **kwargs) -> str
 
 说明： 按照S指定的模板，返回填入参数后的字符串
 
@@ -164,7 +201,7 @@ Hello, Jack, my name is Tom, I am 20 years old
 
 这里暂时理解不了也不用担心，后续在讲函数或者方法的时候会有更加详细的解释
 
-## S.title() -> str
+### S.title() -> str
 
 说明： 返回```S```的标题格式（所有单词的首字母大写）
 
@@ -185,7 +222,7 @@ print(title)
 Hello, Jack, My Name Is Tom, I Am 20 Years Old
 ```
 
-## S.capitalize() -> str
+### S.capitalize() -> str
 
 说明： 返回```S```的首字母大写，其余字母小写形式
 
@@ -206,7 +243,7 @@ print(capitalize)
 Hello, jack, my name is tom, i am 20 years old
 ```
 
-## S.center(width[, fillchar]) -> str
+### S.center(width[, fillchar]) -> str
 
 说明： 返回一个原字符串居中,并使用空格填充至长度 width 的新字符串。默认填充字符为空格
 
@@ -227,7 +264,7 @@ print(a.center(10, "#"))
 ##Center##
 ```
 
-## S.encode(encoding='utf-8', errors='strict') -> bytes
+### S.encode(encoding='utf-8', errors='strict') -> bytes
 
 说明： 按照```encoding```指定的编解码器将字符串S编码
 
@@ -252,65 +289,7 @@ print(encoded)
 b'Encode a string, utf-8, strict'
 ```
 
-## S.endswith(suffix[, start[, end]]) -> bool
-
-说明： 判断字符串S在```start```与```end```之间是否以特定的字符串```suffix```结尾
-
-**参数说明**：
-* **suffix**： 后缀，可以是字符串或者字符串的元组
-* **start**: 可选参数，默认为0
-* **end**: 可选参数，默认为字符串的长度
-
-**示例**：
-
-```
-a = "Encode a string, utf-8, strict"
-b = "Encode a string, utf-8, ignore"
-c = "Encode a string, utf-8, replace"
-
-resulta = a.endswith(("strict", "replace", "ignore"))
-resultb = b.endswith(("strict", "replace", "ignore"))
-resultc = c.endswith(("strict", "replace", "ignore"), 1, 8)
-
-print(resulta, resultb, resultc)
-
-```
-
-**运行结果**：
-
-```
-True True False
-```
-
-## S.find(sub[, start[, end]]) -> int
-
-说明： 在字符串中查找子字符串的开始索引
-
-**参数说明**：
-* **sub**：子字符串
-* **start**：起始位置，默认为0
-* **end**： 结束位置，默认为字符串长度减1
-
-**返回值**：找到返回子字符串起始位置，找不到返回-1
-
-**示例**：
-
-```
-print("this is a string".find("is"))
-print("this is a string".find("is", 3, 10))
-print("this is a string".find("is", 9, 12))
-
-```
-
-**运行结果**：
-
-```
-2
-5
--1
-```
-
-## S.join(iterable) -> str
+### S.join(iterable) -> str
 
 说明：将可迭代对象的元素用字符串S连接起来
 
@@ -355,9 +334,11 @@ TypeError: sequence item 0: expected str instance, int found
 
 *说明：可迭代对象的元素要求是str类型，否则会报错*
 
-## S.split(sep=None, maxsplit=-1) -> list of strings
+### S.split(sep=None, maxsplit=-1) -> list of strings
 
 说明： 将字符串按照指定sep进行分割
+
+另外，S.rsplit(sep=None, maxsplit=-1) -> list of strings 从字符串的尾部向头部开始切割
 
 **参数说明**：
 * **sep**： 分割字符串，默认为None，以空白为分割
@@ -380,6 +361,145 @@ print("one_two_three_four".split("_", 2))
 ['one', 'two', 'three', 'four']
 ['one', 'two', 'three', 'four']
 ['one', 'two', 'three_four']
+```
+
+### S.strip([chars]) -> str
+
+说明：去掉字符串首部和尾部的空白符
+
+**参数说明**：
+* **chars**： 默认为None，表示所有的空白符。如果指定某些字符，则去掉首部和尾部的这些字符
+
+**示例**：
+
+```
+strip_white_space = "   strip test              "
+print("[{}]".format(strip_white_space.strip()))
+
+strip_chars = "abcdefgfedcba"
+print(strip_chars.strip("abc"))
+
+```
+
+**运行结果**：
+
+```
+[strip test]
+defgfed
+```
+
+### S.lower() -> str
+
+说明：返回字符串S的小写
+
+**示例**：
+
+```
+print("Hello World".lower())
+
+```
+
+**运行结果**：
+
+```
+hello world
+```
+
+### S.upper() -> str
+
+说明： 返回字符串S的大写
+
+**示例**：
+
+```
+print("Hello World".upper())
+
+```
+
+**运行结果**：
+
+```
+HELLO WORLD
+```
+
+### S.zfill(width) -> str
+
+说明：将字符串用0填充到指定的宽度，如果指定的宽度小于等于字符串长度，则完整输出字符串
+
+**示例**：
+
+```
+print("123".zfill(5))
+print("123".zfill(3))
+print("123".zfill(2))
+
+```
+
+**运行结果**：
+
+```
+00123
+123
+123
+```
+
+## 判断类
+
+### S.startswith(prefix[, start[, end]]) -> bool
+
+说明： 判断字符串S是否以prefix开头
+
+**参数说明**：
+* **prefix**：要判断的子字符串
+* **start**： 起始位置，默认为0
+* **end**：结束位置，默认为字符串的长度减一
+
+**示例**：
+
+```
+print("hello, world".startswith("hello"))
+print("hello, world".startswith("world"))
+print("hello, world".startswith("world", 7))
+
+```
+
+**运行结果**：
+
+```
+True
+False
+True
+
+```
+
+### S.endswith(suffix[, start[, end]]) -> bool
+
+说明： 判断字符串S在```start```与```end```之间是否以特定的字符串```suffix```结尾
+
+**参数说明**：
+* **suffix**： 后缀，可以是字符串或者字符串的元组
+* **start**: 可选参数，默认为0
+* **end**: 可选参数，默认为字符串的长度
+
+**示例**：
+
+```
+a = "Encode a string, utf-8, strict"
+b = "Encode a string, utf-8, ignore"
+c = "Encode a string, utf-8, replace"
+
+resulta = a.endswith(("strict", "replace", "ignore"))
+resultb = b.endswith(("strict", "replace", "ignore"))
+resultc = c.endswith(("strict", "replace", "ignore"), 1, 8)
+
+print(resulta, resultb, resultc)
+
+```
+
+**运行结果**：
+
+```
+True True False
 ```
 
 ## S.isxxx -> bool
