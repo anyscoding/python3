@@ -138,7 +138,7 @@ print("this is a string".find("is", 9, 12))
 -1
 ```
 
-## 修改类
+## 修改
 
 说明：字符串属于[不可变类型](./basic/data_structure.md)中说明过，这里所说的修改是指讲一个字符串作为输入，得到另外的输出
 
@@ -443,7 +443,7 @@ print("123".zfill(2))
 123
 ```
 
-## 判断类
+## 判断
 
 ### S.startswith(prefix[, start[, end]]) -> bool
 
