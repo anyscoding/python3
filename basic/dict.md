@@ -98,3 +98,57 @@ None
 175
 
 ```
+
+## 修改
+### D.setdefault(k[,d]) -> D.get(k,d), also set D[k]=d if k not in D
+
+说明： 如果字典D中没有k，则设置D[k] = d，否则不做任何修改
+
+**参数说明**：
+* **k**： key
+* **d**： default value，默认为None
+
+**示例**：
+
+```
+d = {"name": "anys", "age": 29}
+
+d.setdefault("sex")
+d.setdefault("height", 175)
+
+print(d)
+
+```
+
+**运行结果**：
+
+```
+{'name': 'anys', 'age': 29, 'sex': None, 'height': 175}
+```
+
+### D.fromkeys(keys, value) -> dict
+
+说明： 返回一个新的字典，字典的key来自可迭代对象keys，value全部设置为value
+
+**参数说明**：
+* **keys**：字典所有的key
+* **value**：所有key对应的value，默认为None
+
+**示例**：
+
+```
+d = {}.fromkeys(["name", "age", "sex"])
+d1 = {}.fromkeys(["name", "age", "sex"], "not set")
+
+print(d)
+print(d1)
+
+```
+
+**运行结果**：
+
+```
+{'name': None, 'age': None, 'sex': None}
+{'name': 'not set', 'age': 'not set', 'sex': 'not set'}
+```
+
