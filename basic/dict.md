@@ -152,3 +152,64 @@ print(d1)
 {'name': 'not set', 'age': 'not set', 'sex': 'not set'}
 ```
 
+### D.copy() -> a shallow copy of D
+
+说明：返回字典D的一个影子
+
+**示例**：
+
+```
+d = {"name": "anys", "age": 29, "hobby": ["reading", "swimming"]}
+d1 = d.copy()
+
+d1["name"] = "Jack"
+d1["hobby"].append("game")
+
+print(d)
+print(d1)
+
+```
+
+**运行结果**：
+
+```
+{'name': 'anys', 'age': 29, 'hobby': ['reading', 'swimming', 'game']}
+{'name': 'Jack', 'age': 29, 'hobby': ['reading', 'swimming', 'game']}
+```
+
+**说明**：
+* d1为d的拷贝
+* 修改d1的```name```对应的值（字符串，不可变类型），d不会被修改
+* 修改d1的```hobby```对于的值（列表，可变类型），则d也同时被修改
+
+### D.pop(k, [default]) -> value
+
+说明：从字典中弹出指定key的value，跟```D.get(k, [default])```不同的是：pop会在字典D中删除k
+
+**参数说明**：
+* **k**：key
+* **default**：当k不在D中时，返回的值
+
+**特别说明**：如果k不在D中，且没有设置default的值，将会返回错误：```KeyError: 'height'```
+
+**示例**：
+
+```
+d = {"name": "anys", "age": 29, "hobby": ["reading", "swimming"]}
+sex = d.pop("sex", "man")
+hobby = d.pop("hobby")
+
+print(sex)
+print(hobby)
+
+print(d)
+
+```
+
+**运行结果**：
+
+```
+man
+['reading', 'swimming']
+{'name': 'anys', 'age': 29}
+```
