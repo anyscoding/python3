@@ -213,3 +213,79 @@ man
 ['reading', 'swimming']
 {'name': 'anys', 'age': 29}
 ```
+
+### D.popitem() -> (k, v)
+
+说明：删除并返回```(key, value)```对，如果D为空则出错，提示KeyError
+
+**示例**：
+
+```
+d = {"name": "anys", "age": 29, "hobby": ["reading", "swimming"]}
+
+k, v = d.popitem()
+
+print(k, v)
+print(d)
+
+```
+
+**运行结果**：
+
+```
+hobby ['reading', 'swimming']
+{'name': 'anys', 'age': 29}
+```
+
+### D.clear() -> None.  Remove all items from D.
+
+说明：清空D中的所有元素
+
+**示例**：
+
+```
+d = {"name": "anys", "age": 29, "hobby": ["reading", "swimming"]}
+
+d.clear()
+
+print(d)
+
+```
+
+**运行结果**：
+
+```
+{}
+```
+
+### D.update([E, ]**F) -> None.  Update D from dict/iterable E and F
+
+说明：更新字典D
+
+**参数说明**：
+* **E**：字典或者可迭代对象（每个元素是一个二元组，二元组的第一个元素作为key，第二个元素作为value）
+* **F**：关键字参数，传入方式参考示例代码
+
+**示例**：
+
+```
+d = {"name": "anys", "age": 29, "hobby": ["reading", "swimming"]}
+
+d.update({"sex": "man"})
+print(d)
+
+d.update([("firstname", "an")])
+print(d)
+
+d.update(lastname="yushun")
+print(d)
+
+```
+
+**运行结果**：
+
+```
+{'name': 'anys', 'age': 29, 'hobby': ['reading', 'swimming'], 'sex': 'man'}
+{'name': 'anys', 'age': 29, 'hobby': ['reading', 'swimming'], 'sex': 'man', 'firstname': 'an'}
+{'name': 'anys', 'age': 29, 'hobby': ['reading', 'swimming'], 'sex': 'man', 'firstname': 'an', 'lastname': 'yushun'}
+```
