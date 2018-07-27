@@ -12,7 +12,7 @@
 
 函数看起来会像下图这样：
 
-![function](pics/function.jpeg)
+![function](pics/function.jpg)
 
 # 函数定义
 
