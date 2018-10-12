@@ -51,8 +51,8 @@ python3新手入门教程
     
 第四章 组织你的代码
     
-    4.1 [模块 module](structure/module.md)
+    4.1 [模块 module](structure/module.md)
     
-    4.2 [包 package](structure/package.md)
+    4.2 [包 package](structure/package.md)
     
-    4.3 [库 lib](structure/lib.md)
+    4.3 [库 lib](structure/lib.md)
