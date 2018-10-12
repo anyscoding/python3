@@ -47,5 +47,5 @@ python3新手入门教程
     
     3.6 [函数](basic/function.md)
     
-    3.7 [匿名函数 lambda](basic/lambda.md)
+    3.7 [匿名函数 lambda](basic/lambda.md)
     
