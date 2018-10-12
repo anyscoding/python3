@@ -4,22 +4,26 @@ python3新手入门教程
 
 # 目录
 
-第一章 介绍
-
+<details>
+<summary>第一章 介绍</summary>
+    
     1.1 [人们眼中的python](introducation/people_see_python.md)
     
     1.2 [关于python](introducation/state_of_python.md)
-    
+</details>
 
-第二章 安装
+<details>
+<summary>第二章 安装</summary>
     
     2.1 [安装python3.6.5](install/python3.6.5.md)
     
     2.2 [安装IDE](install/IDE.md)
     
     2.3 [创建项目和HelloWorld](install/create_project.md)
+</details>
 
-第三章 基础
+<details>
+<summary>第三章 基础</summary>
     
     3.1 [编程之前](basic/before_programming.md)
     
@@ -29,7 +33,8 @@ python3新手入门教程
     
     3.4 [变量](basic/variable.md)
     
-    3.5 数据结构
+    <details>
+    <summary>3.5 数据结构</summary>
     
         3.5.1 [概述](basic/data_structure.md)
         
@@ -44,15 +49,19 @@ python3新手入门教程
         3.5.6 [列表](basic/list.md)
         
         3.5.7 [字典](basic/dict.md)
+    </details>
     
     3.6 [函数](basic/function.md)
     
     3.7 [匿名函数 lambda](basic/lambda.md)
-    
-第四章 组织你的代码
+</details>
+
+<details>
+<summary>第四章 组织你的代码</summary>
     
     4.1 [模块 module](structure/module.md)
     
     4.2 [包 package](structure/package.md)
     
     4.3 [库 lib](structure/lib.md)
+</details>
